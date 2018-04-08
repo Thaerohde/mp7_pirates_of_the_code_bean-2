@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Dutchman" />
+        <module name="jack_sparrow" />
+        <module name="tia_Dalma" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Dutchman" target="9" />
+      <module name="jack_sparrow" target="9" />
+      <module name="tia_Dalma" target="9" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
