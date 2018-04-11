@@ -10,24 +10,22 @@ import org.springframework.web.client.RestTemplate;
 import refugeescode.at.jack_sparrow.model.Treasure;
 
 @Configuration
-public class Starter {
-    @Value("${TiaDalma.dutchmanLocation}")
+public class JackSparrowStarter {
+
+    @Value("${TiaDalma.DutchmanLocation}")
     private String dutchmanUrl;
 
     @Bean
-    public ApplicationRunner startPoint(RestTemplate restTemplate) {
+    public ApplicationRunner startApplication(RestTemplate restTemplate) {
         return args -> {
             ResponseEntity<String> dutchmanEntity = restTemplate.getForEntity(dutchmanUrl, String.class);
-            String dutchmanLocation = dutchmanEntity.getBody();
-            ResponseEntity<Treasure> messageEntity = restTemplate.getForEntity(dutchmanLocation, Treasure.class);
+            String dutchmanPlace = dutchmanEntity.getBody();
+            ResponseEntity<Treasure> messageEntity = restTemplate.getForEntity(dutchmanPlace, Treasure.class);
             Treasure treasure = messageEntity.getBody();
             System.out.println(treasure.getMessage());
         };
     }
 }
-
-
-
 
 
 

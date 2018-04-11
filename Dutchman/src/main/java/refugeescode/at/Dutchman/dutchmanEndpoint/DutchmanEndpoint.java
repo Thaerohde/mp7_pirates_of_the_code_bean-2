@@ -6,12 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import refugeescode.at.Dutchman.model.Treasure;
 
-@RestController
 @RequestMapping
+@RestController
 public class DutchmanEndpoint {
+
     @GetMapping("/deadmanchest")
     public Treasure sendTheMessage(Treasure treasure) {
-        treasure.setRequest("found the treasure!");
+        treasure.setMessage("found the treasure!");
         return treasure;
     }
+
 }

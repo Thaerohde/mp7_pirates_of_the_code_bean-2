@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class Treasure {
 
-    private String request;
+    private String message;
 
-    public String getRequest() {
-        return request;
+    public String getMessage() {
+        return message;
     }
 
-    public void setRequest(String request) {
-        this.request = request;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

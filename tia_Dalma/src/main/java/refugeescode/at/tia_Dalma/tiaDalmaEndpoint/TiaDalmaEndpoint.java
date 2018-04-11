@@ -12,11 +12,11 @@ public class TiaDalmaEndpoint {
 
 
     @Value("${dutchman.location}")
-    private String dutchmanLocation ;
+    private String dutchmanUrl;
 
     @GetMapping("/dutchman")
-    public String getDutchmanLocation(){
-        return dutchmanLocation;
+    public String getDutchmanUrl(){
+        return dutchmanUrl;
     }
 
 }
